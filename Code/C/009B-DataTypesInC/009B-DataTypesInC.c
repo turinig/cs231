@@ -9,6 +9,7 @@
 #include <stdio.h> // Importing external code for "printf" etc.
 #include <limits.h> // Importing external code for integer types info etc.
 #include <float.h > // Importing external code for floating-point types info etc.
+#include <stdbool.h> // Importing external code for boolean types.
 
 // Lists all data types in C...
 int main() {
@@ -163,7 +164,13 @@ int main() {
 	printf("TYPE: long double\t");
 	printf("BITSIZE: %llu\t", (sizeof(long double) * 8));
 	printf("RANGE: [%Lg, %Lg]\t", LDBL_MIN, LDBL_MAX);
-	printf("NOTE: extended precision floating-point type\n");
+	printf("NOTE: extended precision floating-point type\n\n");
+
+	// bool
+	printf("TYPE: bool\t");
+	printf("BITSIZE: %llu\t", (sizeof(bool) * 8));
+	printf("RANGE: {%u, %u}\t", false, true);
+	printf("NOTE: boolean type, included in C99 (ANSI C)\n");
 
 	// Normal exit.
 	return 0;
